@@ -107,7 +107,6 @@ src/StandDesk.Core/      Protocol, settings, and movement controller
 tests/StandDesk.Tests/   Automated tests without physical desk movement
 config/                 Initial desk-specific configuration
 docs/                   Build, usage, and hardware documentation
-plans/                  Design and implementation notes
 ```
 
 The root Python scripts are earlier desk investigation and backup utilities. They are not used by the C# app. Local backups, diagnostic captures, cloned reference repositories, virtual environments, and published binaries are excluded by `.gitignore`.
