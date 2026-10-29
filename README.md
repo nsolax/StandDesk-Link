@@ -1,8 +1,31 @@
-# StandDesk
+# StandDesk — IKEA / LINAK DPG1I002-00
 
-A C# / WPF Windows app for controlling a LINAK Bluetooth standing desk from the desktop, system tray, or keyboard.
+A C# / WPF Windows app built for an IKEA standing desk equipped with a **LINAK DPG1I002-00** controller. Control sitting and standing heights from the desktop, system tray, or keyboard.
 
-This project is configured for **DESK 2079**, with a LINAK DPG1I002-00 panel. The Bluetooth address, calibration, and initial presets are specific to that desk. Other desks require configuration changes and supervised hardware validation before movement is enabled.
+## Supported hardware
+
+This version was developed and tested with one physical desk:
+
+| Detail | Development desk |
+| --- | --- |
+| Desk brand | IKEA |
+| Controller manufacturer | LINAK |
+| Controller / item ID | DPG1I002-00 (label supplied as `DPG1i002-00`) |
+| Other label markings | “Designed in Denmark”, `DK-6430` |
+| Bluetooth name | `DESK 2079` |
+| Tested operating system | Windows 11 x64 |
+
+The exact IKEA retail desk model has not been identified. The controller identifier above describes the LINAK panel; it is not an IKEA retail model name. `DESK 2079` is the development desk's Bluetooth name, not a product model.
+
+**This is a desk-specific implementation, not a universal standing-desk controller.** Compatibility with other IKEA desks, other LINAK controllers, or other manufacturers has not been verified. A matching controller label alone does not establish compatibility.
+
+### Adapting it to another desk
+
+The current source includes the development desk's Bluetooth address, calibration, and initial presets. `DeskSettings.Validate()` also restricts the allowed address. This release does not provide automatic desk discovery or a multi-desk setup wizard.
+
+To adapt the project, review `src/StandDesk.Core/DeskSettings.cs`, its address validation, and the Bluetooth protocol in `src/StandDesk.App/Services/WinRtBleTransport.cs`. The JSON file in `config/` documents the initial values; changing that file alone does not reconfigure the compiled app. Verify the new desk's protocol, calibration, travel bounds, and Stop behavior before enabling movement. Do not reuse the development desk's height limits or mark hardware validation successful without an attended test.
+
+This is an independent project and is not affiliated with or endorsed by IKEA or LINAK.
 
 ## Features
 
