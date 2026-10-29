@@ -1,0 +1,21 @@
+**/bin/
+**/obj/
+.venv/
+dist/
+.vs/
+
+# Local desk data and investigation artifacts
+backups/
+diagnostics/
+reference/
+desired_positions.json
+.standdesk/
+
+# Local development settings
+*.user
+*.suo
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example

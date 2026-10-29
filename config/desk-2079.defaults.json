@@ -1,0 +1,15 @@
+{
+  "Version": 1,
+  "Address": "D8:81:2F:0B:F2:7F",
+  "BaseRaw": 6250,
+  "SitRaw": 1162,
+  "StandRaw": 5437,
+  "MinRaw": 1162,
+  "MaxRaw": 5437,
+  "MotionValidated": false,
+  "HotkeysEnabled": false,
+  "StartAtLogin": false,
+  "SitKey": "Ctrl+Alt+Shift+Down",
+  "StandKey": "Ctrl+Alt+Shift+Up",
+  "StopKey": "Ctrl+Alt+Shift+Space"
+}
